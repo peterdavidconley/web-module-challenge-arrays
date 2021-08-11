@@ -51,8 +51,6 @@ function copy(originalFlavors){
 
 
 
-
-
 /*🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 2: 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 
 Confirm that an array is exactly 31 flavors. Your function should accept:
   1. an array as a parameter
@@ -64,8 +62,12 @@ For Example: is31Flavors(originalFlavors) will return true if your code is worki
 */
 
 
-function is31Flavors(/*your code here*/){
- /*your code here*/
+function is31Flavors(array){
+ if (array.length === 31) {
+   return true
+ } else {
+   return false
+ }
 }
 
 /* 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 3: 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 
@@ -160,10 +162,20 @@ Use the filterByWord function below to do the following:
   DO NOT USE ADVANCED ARRAY METHODS (i.e. .filter) to solve this problem. 
 */
 
-function filterByWord(/*your code here*/){
-  /*your code here*/
+function filterByWord(array, string){
+  //create new array
+  const filteredArray = [];
+  //write a loop that checks every item inside the array
+  for (let i = 0 ; i < array.length ; i++) {
+    //write an if statement to check to see if the item includes the string
+    if (array[i].includes(string)) {
+      filteredArray.push(array[i])
+    }// closes conditional
+  }// closes loop
+  return filteredArray;
 }
 
+console.log(filterByWord(originalFlavors, "Chocolate"))
 
 /* 💪💪💪💪💪🧁🍦🍨 STRETCH 🍨🍦🍫💪💪💪💪💪*/ 
 
