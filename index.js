@@ -143,7 +143,15 @@ Use the removeFlavorByName function below to do the following:
 */
 
 function removeFlavorByName(array, flavor){
-  //Remove the received flavor from the received array
+
+  for (let i = 0 ; i < array.length ; i++) {
+
+    if (array[i] === flavor) {
+      array.splice(array[i], 1)
+    } // closes conditional
+
+  } // closes loop
+  
   return array
 }
 
