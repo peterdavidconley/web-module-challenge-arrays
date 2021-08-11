@@ -204,12 +204,23 @@ Use the getAverageWordLength function below to do the following:
   For example: getAverageWordLength(originalFlavors) should return a number between 0 and 3.     
 */
 
-function getAverageWordLength(array){
-  /*code here*/
+function getAverageWordLength(array){  
 
-  //let avgWords = 
+  let wordCount = 0;
 
-  //return Total number of words in entire array / number of array items
+  // write a for loop that goes through the array store each item in a variable (let item = array[i])
+
+  //include a while loop to count both words inbetween space
+
+  // while loop -- item.includes(" ");
+
+  // create another variable and use indexof() -- will take string with a space as an argument
+
+  // Count the total amount of words in the array & store it in a variable (space)
+  
+  // Use .slice() -- taking the argument of the prior variable (space)
+
+  return (wordCount/array.length)
 }
 
 
