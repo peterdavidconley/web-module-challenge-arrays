@@ -147,12 +147,12 @@ function removeFlavorByName(array, flavor){
   for (let i = 0 ; i < array.length ; i++) {
 
     if (array[i] === flavor) {
-      array.splice(array[i], 1)
+      array.splice(i, 1)
     } // closes conditional
 
   } // closes loop
   
-  return array
+  return array;
 }
 
 
@@ -204,8 +204,12 @@ Use the getAverageWordLength function below to do the following:
   For example: getAverageWordLength(originalFlavors) should return a number between 0 and 3.     
 */
 
-function getAverageWordLength(/*code here*/){
+function getAverageWordLength(array){
   /*code here*/
+
+  //let avgWords = 
+
+  //return Total number of words in entire array / number of array items
 }
 
 
