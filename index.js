@@ -45,11 +45,9 @@ Use the copy function below to do the following:
   2. Return a copy of the received array  
 */
 
-function copy(/*your code here*/){
-  /*your code here*/
+function copy(originalFlavors){
+  return originalFlavors;
 }    
-
-
 
 
 
@@ -64,8 +62,12 @@ For Example: is31Flavors(originalFlavors) will return true if your code is worki
 */
 
 
-function is31Flavors(/*your code here*/){
- /*your code here*/
+function is31Flavors(array){
+ if (array.length === 31) {
+   return true
+ } else {
+   return false
+ }
 }
 
 /* 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 3: 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 
@@ -81,8 +83,9 @@ Use the addFlavor function below to do the following:
 */
 
 
-function addFlavor(/*your code here*/){
- /*your code here*/
+function addFlavor(array, newFlavor){
+  array.unshift(newFlavor);
+ return array;
 }
 
 
@@ -97,8 +100,11 @@ Use the removeLastFlavor function below to do the following:
   For example: running removeLastFlavor(originalFlavors) would return ["Rainbow Sherbert", "Banana Nut Fudge",..."Vanilla"]
 */
 
-function removeLastFlavor(/*your code here*/){
- /*your code here*/
+
+
+function removeLastFlavor(array){
+  array.pop();
+ return array
 }
 
 
@@ -114,8 +120,10 @@ Use the getFlavorByIndex function below to do the following:
   For example: running getFlavorByIndex(originalFlavors, 2) would return "Black Walnut", assuming Rainbow Sherbert has been added successfully
 */
 
-function getFlavorByIndex(/*your code here*/){
-  /*your code here*/
+
+
+function getFlavorByIndex(array, desiredIndex){
+  return array[desiredIndex]
 }
 
 
@@ -134,8 +142,17 @@ Use the removeFlavorByName function below to do the following:
   HINT: You can use .splice() for this
 */
 
-function removeFlavorByName(/*your code here*/){
-  /*your code here*/
+function removeFlavorByName(array, flavor){
+
+  for (let i = 0 ; i < array.length ; i++) {
+
+    if (array[i] === flavor) {
+      array.splice(i, 1)
+    } // closes conditional
+
+  } // closes loop
+  
+  return array;
 }
 
 
@@ -160,10 +177,20 @@ Use the filterByWord function below to do the following:
   DO NOT USE ADVANCED ARRAY METHODS (i.e. .filter) to solve this problem. 
 */
 
-function filterByWord(/*your code here*/){
-  /*your code here*/
+function filterByWord(array, string){
+  //create new array
+  const filteredArray = [];
+  //write a loop that checks every item inside the array
+  for (let i = 0 ; i < array.length ; i++) {
+    //write an if statement to check to see if the item includes the string
+    if (array[i].includes(string)) {
+      filteredArray.push(array[i])
+    }// closes conditional
+  }// closes loop
+  return filteredArray;
 }
 
+console.log(filterByWord(originalFlavors, "Chocolate"))
 
 /* 💪💪💪💪💪🧁🍦🍨 STRETCH 🍨🍦🍫💪💪💪💪💪*/ 
 
@@ -177,8 +204,23 @@ Use the getAverageWordLength function below to do the following:
   For example: getAverageWordLength(originalFlavors) should return a number between 0 and 3.     
 */
 
-function getAverageWordLength(/*code here*/){
-  /*code here*/
+function getAverageWordLength(array){  
+
+  let wordCount = 0;
+
+  // write a for loop that goes through the array store each item in a variable (let item = array[i])
+
+  //include a while loop to count both words inbetween space
+
+  // while loop -- item.includes(" ");
+
+  // create another variable and use indexof() -- will take string with a space as an argument
+
+  // Count the total amount of words in the array & store it in a variable (space)
+  
+  // Use .slice() -- taking the argument of the prior variable (space)
+
+  return (wordCount/array.length)
 }
 
 
